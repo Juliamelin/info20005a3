@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>About</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/mjj6lpb.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -43,63 +43,44 @@
         <a href="javascript:void(0);" class="hamburger" onclick="showHide('topnav')"><i class="fa fa-bars"></i></a>
     </header>
 
-    <main>
+    <main id="about">
         <!-- the top big image -->
         <div class="container">
-            <img id="home_image" src="Photo/Vinyl homepage.jpeg" alt="photo of a vinyl">
-            <a id="intro" href="about.html">Discover new music.<br>Track your collection and wishlist.<br>Contribute to the catalog.<br>Buy & Sell in Marketplace.<br>Learn more...</a>
+            <img id="home_image" src="Photo/about main.jpeg" alt="image of CD">
+            <h1 id="about_txt">About Discogs</h1>
         </div>
 
-        <!-- navigation in the main area -->
-        <div class="flex_container">
-            <div class="container">
-                <img class="nav_image" src="Photo/shop music.jpeg" alt="photo of poeple buying CD">
-                <a href="productListing.html">Buy Music</a>
-            </div>
-
-            <div class="container">
-                <img class="nav_image" src="Photo/sell music.jpeg" alt="photo of CD">
-                <a href="">Sell Music</a>
-            </div>
-
-            <div class="container">
-                <img class="nav_image" src="Photo/community.jpeg" alt="photo of a person">
-                <a href="">Community</a>
-            </div>
-        </div>
-
-        <!-- special event section -->
-        <h1 id="left_title">Special Events</h1>
-
-        <div class="flex_container">
-            <section>
-                <img src="Photo/special event 1.jpeg" alt="Special Event 1">
-            </section>
-            <section>
-                <img src="Photo/special event 2.jpeg" alt="Special Event 2">
-            </section>
-        </div>
-
-        <!-- newsletter subscription section -->
-        <div class="flex_container">
-            <h2>Join Discogs Newsletters - Keep up with new releases, artists and more!</h2>
-            <div class="subscribe_box">
-                <input class="input_txt" type="text" placeholder="Enter your email" name="">
-                <button id="subscribe_button" type="submit">Subscribe</button>
-            </div>
-        </div>
-
-        <!-- app advertisement section -->
-        <section class="app_section">
-            <div class="grey_background">
-                <div class="layout">
-                    <img class="item1" src="Photo/mobile app.png" alt="Image of Mobile App">
-                    <h2>It's Everywhere!<br>The official Discogs App.<br>Downlaod now for free.</h2>
-                    <img class="item2" src="Photo/app store.svg" alt="button of App Store">
-                    <img class="item3" src="Photo/Google Play.png" alt="button of Google Play">
+        <h3 class="discription">We’re on a mission to build the biggest and most comprehensive music database and marketplace. Imagine a site with discographies of all labels, all artists, all cross-referenced, and an international marketplace built off of that database. It’s for the love of music, and we’re getting closer every day.</h3>
+        
+        <!-- three sections with different topics -->
+        <div class="grey_background">
+            <div class="flex_container">
+                <div class="cards"><img src="Photo/the database.jpeg" alt="photo of CDs"></div>
+                <div class="cards">
+                    <h1>The Database</h1>
+                    <p>The heart of Discogs is a user-built database of music. More than 516,000 people have contributed some piece of knowledge, to build up a catalog of more than 12,487,000 recordings and 6,862,000 artists. We’re far from done and you can contribute too! Discogs also offers the ability to catalog your music collection, wantlist, and share your ratings and reviews.</p>
                 </div>
             </div>
-        </section>
+        </div>
+        
+        <div class="flex_container">
+            <div class="cards">
+                <h1>The Marketplace</h1>
+                <p>The Discogs Marketplace connects buyers and sellers across the globe. With more than 23 million items available and thousands of sellers, this is the premier spot from new releases to hard to find gems. Because the Marketplace is built on top of the accurate Discogs database, it is easy for sellers to list their inventory and buyers are able to specify the exact version they want.</p>
+            </div>
+            <div class="cards"><img src="Photo/the marketplace.jpeg" alt="photo of market"></div>
+        </div>
+
+        <div class="grey_background">
+            <div class="flex_container">
+                <div class="cards"><img src="Photo/the story.jpeg" alt="photo of typewriter"></div>
+                <div class="cards">
+                    <h1>The Story</h1>
+                    <p>Originally created as a hobby project in 2000 by Kevin Lewandowski, Discogs has grown to become a definitive resource for Vinyl and CD recordings.</p>
+                </div>
+            </div>
+        </div>
+        
     </main>
 
     <footer>
