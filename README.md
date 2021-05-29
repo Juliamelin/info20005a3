@@ -4,6 +4,6 @@
 
 ### Welcome to my submission repository!
 
-This is my website live link [https://Juliamelin.github.io]
+This is my website live link [https://juliamelin.github.io/info20005a3/]
 
-[https://Juliamelin.github.io]: https://Juliamelin.github.io
+[https://juliamelin.github.io/info20005a3/]: https://juliamelin.github.io/info20005a3/
