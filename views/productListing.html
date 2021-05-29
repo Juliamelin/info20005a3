@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/mjj6lpb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/stylesheet.css">
+    <script src="js/script.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <!-- search button in small screen -->
+        <a class="search_button" href="#"><i class="fa fa-search"></i></a>
+
+        <!-- logo -->
+        <a href="index.html"><img id="logo" src="public/images/Discogs Logo.jpeg" alt="Discogs Logo"></a>
+
+        <!-- search box -->
+        <div class="text_box">
+            <input class="input_txt" type="text" placeholder="Search album, artists and more..." name="">
+            <a class="search_button" href="#"><i class="fa fa-search"></i></a>
+        </div>
+
+        <!-- top navigation list -->
+        <nav id="topnav">
+            <ul>
+                <li><a href="productListing.html">Buy Music</a></li>
+                <li><a href="">Sell Music</a></li>
+                <li><a href=""><i class="fa fa-question-circle"></i> Help</a></li>
+                <li><a href=""><i class="fa fa-heart"></i> Wishlist</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="logIn.html"><i class="fa fa-user"></i> Log In</a></li>
+            </ul>
+        </nav>
+
+        <!-- hamburger icon in small screen -->
+        <a href="javascript:void(0);" class="hamburger" onclick="showHide('topnav')"><i class="fa fa-bars"></i></a>
+    </header>
+
+    <main>
+        <!-- breadcrumb list -->
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Buy Music</a></li>
+            <li><a href="#">All Items</a></li>
+        </ul>
+
+        <!-- filter button in small screen -->
+        <button href="javascript:void(0);" onclick="showHide('filter_list')" class="grey_button" id="filter" type="button">
+            <i class="fa fa-filter">Filter</i>
+        </button>
+
+        <!-- filter list -->
+        <div class="flex_container" id="filter_list">
+            <div>
+                <form>
+                    <label>Currency:</label>
+                    <select id="currency_dl" size="1">
+                        <option value="" selected="selected">Select</option>
+                        <option value="EUR">EUR</option>
+                        <option value="USD">USD</option>
+                        <option value="AUD">AUD</option>
+                    </select>
+                </form>
+                <form>
+                    <label>Year:</label>
+                    <select id="year_dl" size="1">
+                        <option value="" selected="selected">Select</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                    </select>
+                </form>
+                <form>
+                    <label>Genre:</label>
+                    <select id="genre_dl" size="1">
+                        <option value="" selected="selected">Select</option>
+                        <option value="rock">Rock</option>
+                        <option value="electronic">Electronic</option>
+                        <option value="pop">Pop</option>
+                    </select>
+                </form>
+            </div>
+
+            <div>
+                <form>
+                    <label>Format:</label>
+                    <select id="format_dl" size="1">
+                        <option value="" selected="selected">Select</option>
+                        <option value="Vinyl">Vinyl</option>
+                        <option value="CD">CD</option>
+                        <option value="Cassette">Cassette</option>
+                    </select>
+                </form>
+                <form>
+                    <label>Media Condition:</label>
+                    <select id="condition_dl" size="1">
+                        <option value="" selected="selected">Select</option>
+                        <option value="VG+">Very Good Plus (VG+)</option>
+                        <option value="NM">Near Mint (NM)</option>
+                        <option value="M">Mint (M)</option>
+                    </select>
+                </form>
+                <form>
+                    <label>Style:</label>
+                    <select id="style_dl" size="1">
+                        <option value="" selected="selected">Select</option>
+                        <option value="pop rock">Pop Rock</option>
+                        <option value="house">House</option>
+                        <option value="disco">Disco</option>
+                    </select>
+                </form>
+            </div>
+
+            <div>
+                <form>
+                    <label>Ships from:</label>
+                    <select id="shipping_dl" size="1">
+                        <option value="" selected="selected">Select</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="Germany">Germany</option>
+                    </select>
+                </form>
+                <form>
+                    <label>Seller:</label>
+                    <select id="seller_dl" size="1">
+                        <option value="" selected="selected">Select</option>
+                        <option value="recordsale-de">recordsale-de</option>
+                        <option value="1207vinyl.dk">1207vinyl.dk</option>
+                        <option value="KUPIKU-COM">KUPIKU-COM</option>
+                    </select>
+                </form>
+            </div>
+
+            <button class="grey_button" type="button">Apply Filter</button>
+        </div>
+
+        <!-- product list title -->
+        <h2 class="section_heading">All Items</h2>
+        <p>1 - 25 of 53,431,320 items</p>
+
+        <!-- product list -->
+        <div id="product_list">
+            <section class="product">
+                <a href="product.html"><img class="record_cover" src="public/images/products/the wall.jpg" alt="cover of album The Wall"></a>
+                <h2>Pink Floyd</h2>
+                <a href="product.html"><h3>The Wall</h3></a>
+                <p class="price">A$24.83</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/cheeba fever e.p.jpg" alt="cover of album Cheeba Fever E.P.">
+                <h2>DJ Ex-Efx</h2>
+                <h3>Cheeba Fever E.P.</h3>
+                <p class="price">A$15.60</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/sally free and easy ep.jpg" alt="cover of album Sally Free And Easy EP">
+                <h2>Flying Saucer Attack</h2>
+                <h3>Sally Free And Easy EP</h3>
+                <p class="price">A$27.00</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/finale.jpg" alt="cover of album Finale">
+                <h2>Baby Mammoth</h2>
+                <h3>Finale</h3>
+                <p class="price">A$10.00</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/the limitations ep.jpg" alt="cover of album The Limitations EP">
+                <h2>Dr Delay</h2>
+                <h3>The Limitations</h3>
+                <p class="price">A$5.00</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/a very special christmas.jpg" alt="cover of album A Very Special Christmas">
+                <h2>Various</h2>
+                <h3>A Very Special Christmas</h3>
+                <p class="price">A$15.00</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/ignorance never dies.jpg" alt="cover of album Ignorance Never Dies">
+                <h2>Your Demise</h2>
+                <h3>Ignorance Never Dies</h3>
+                <p class="price">A$15.00</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/pulse.jpg" alt="cover of album Pulse">
+                <h2>Amara</h2>
+                <h3>Pulse</h3>
+                <p class="price">A$29.99</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/halloween.jpg" alt="cover of album Halloween">
+                <h2>Da Boy Tommy</h2>
+                <h3>Halloween</h3>
+                <p class="price">A$15.99</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/slow motion.jpg" alt="cover of album Slow Motion">
+                <h2>Rhubarb</h2>
+                <h3>Slow Motion</h3>
+                <p class="price">A$29.99</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/the dark side of the moon.jpg" alt="cover of album The Dark Side of the Moon">
+                <h2>Pink Floyd</h2>
+                <h3>The Dark Side of the Moon</h3>
+                <p class="price">A$64.54</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/deep out.jpg" alt="cover of album Deep Out">
+                <h2>Melon</h2>
+                <h3>Deep Out</h3>
+                <p class="price">A$16.49</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/minutes to midnight.jpg" alt="cover of album Minutes to Midnight">
+                <h2>Linkin Park</h2>
+                <h3>Minutes to Midnight</h3>
+                <p class="price">A$29.21</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/let's go together.jpg" alt="cover of album Let's go Together">
+                <h2>Change</h2>
+                <h3>Let's go Together</h3>
+                <p class="price">A$15.38</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="product">
+                <img class="record_cover" src="public/images/products/the marshall mathers.jpg" alt="cover of album The Marshall Mathers">
+                <h2>Eminem</h2>
+                <h3>The Marshall Mathers</h3>
+                <p class="price">A$34.94</p>
+                <button onclick="addToCart()" class="grey_button" type="button">Add to Cart</button>
+            </section>
+        </div>
+
+        <a class="page" href="">&lt; Prev</a>
+        <a class="page" href="">Next &gt;</a>
+
+        <h3 class="no_of_items">1-25 of 53,431,320 items</h3>
+
+        <!-- newsletter subscription -->
+        <div class="flex_container">
+            <h2>Join Discogs Newsletters - Keep up with new releases, artists and more!</h2>
+            <div class="subscribe_box">
+                <input class="input_txt" type="text" placeholder="Enter your email" name="">
+                <button id="subscribe_button" type="submit">Subscribe</button>
+            </div>
+        </div>
+
+        <!-- app advertisement section -->
+        <section class="app_section">
+            <div class="grey_background">
+                <div class="layout">
+                    <img class="item1" src="public/images/mobile app.png" alt="Image of Mobile App">
+                    <h2>It's Everywhere!<br>The official Discogs App.<br>Downlaod now for free.</h2>
+                    <img class="item2" src="public/images/app store.svg" alt="button of App Store">
+                    <img class="item3" src="public/images/Google Play.png" alt="button of Google Play">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- 3 footer lists -->
+        <div class="flex_container">
+            <div class="footer_list">
+                <ul>
+                    <h2>Help</h2>
+                    <li><a href="">Get Started</a></li>
+                    <li><a href="">Shipping</a></li>
+                    <li><a href="">Payment</a></li>
+                    <li><a href="">Help and Support</a></li>
+                    <li><a href="">Forum</a></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="footer_list">
+                <ul>
+                    <h2>Contact</h2>
+                    <li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+                    <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                    <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href=""><i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+                    <li><a href=""><i class="fa fa-soundcloud" aria-hidden="true"></i> Soundcloud</a></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="footer_list">
+                <ul>
+                    <h2>Discogs</h2>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Sign up</a></li>
+                    <li><a href="">Community</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Discogs Events</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul id="footer_items">
+            <li><a href="">	&copy; 2020 Discogs</a></li>
+            <li><a href="">Cookie Policy</a></li>
+            <li><a href="">Term of Servic</a></li>
+            <li><a href="">Privacy Policy</a></li>
+        </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product page</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/mjj6lpb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/stylesheet.css">
+    <script src="js/script.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <!-- search button in small screen -->
+        <a class="search_button" href="#"><i class="fa fa-search"></i></a>
+
+        <!-- logo -->
+        <a href="index.html"><img id="logo" src="public/images/Discogs Logo.jpeg" alt="Discogs Logo"></a>
+
+        <!-- search box -->
+        <div class="text_box">
+            <input class="input_txt" type="text" placeholder="Search album, artists and more..." name="">
+            <a class="search_button" href="#"><i class="fa fa-search"></i></a>
+        </div>
+
+        <!-- top navigation list -->
+        <nav id="topnav">
+            <ul>
+                <li><a href="productListing.html">Buy Music</a></li>
+                <li><a href="">Sell Music</a></li>
+                <li><a href=""><i class="fa fa-question-circle"></i> Help</a></li>
+                <li><a href=""><i class="fa fa-heart"></i> Wishlist</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="logIn.html"><i class="fa fa-user"></i> Log In</a></li>
+            </ul>
+        </nav>
+
+        <!-- hamburger icon in small screen -->
+        <a href="javascript:void(0);" class="hamburger" onclick="showHide('topnav')"><i class="fa fa-bars"></i></a>
+    </header>
+
+    <main>
+        <!-- breadcrumb list -->
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productListing.html">Buy Music</a></li>
+            <li><a href="productListing.html">All Items</a></li>
+            <li><a href="#">Pink Floyd - The Wall</a></li>
+        </ul>
+        
+        <!-- image and important information of the product -->
+        <div class="flex_container">
+            <div class="product_info"><img src="public/images/products/the wall.jpg" alt="album cover of The Wall"></div>
+
+            <div class="product_info">
+                <div>
+                    <h2>Pink Floyd</h2>
+                    <h2>The Wall</h2>
+                </div>
+                
+                <div class="flex_container">
+                    <ul class="info">
+                        <li>Label:</li>
+                        <li>Format:</li>
+                        <li>Released:</li>
+                        <li>Genre:</li>
+                        <li>Style:</li>
+                    </ul>
+                    <ul class="info">
+                        <li>Columbia - PC2 36183</li>
+                        <li>2 x Vinyl, LP, Album</li>
+                        <li>1979, US</li>
+                        <li>Rock</li>
+                        <li>Prog Rock, Classic Rock</li>
+                    </ul>
+                </div>
+
+                <h2>$ 24.83</h2>
+                <p class="condition">In Stock</p>
+
+                <!-- grid container to arrange buttons -->
+                <div class="grid_buttons">
+                    <div class="quantity_btn">
+                        <button onclick="substract()" class="quantity_btn" type="button">-</button>
+                        <input type="number" id="quantity_btn" value="1" min="1">
+                        <button onclick="append()" class="quantity_btn" type="button">+</button>
+                    </div>
+                    <button class="grey_button" type="button"><i class="fa fa-heart"></i> Add to Wishlist</button>
+                    <button onclick="document.location='cart.html'" class="green_button" type="button">
+                        <i class="fa fa-shopping-cart"></i>
+                         Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- other information -->
+        <div class="light_background">
+            <!-- tracklist -->
+            <section class="info_section">
+                <h1>Tracklist</h1>
+                <div class="flex_container">
+                    <ul>
+                        <li>A1</li>
+                        <li>A2</li>
+                        <li>A3</li>
+                        <li>A4</li>
+                        <li>A5</li>
+                        <li>A6</li>
+                        <li>B1</li>
+                        <li>B2</li>
+                        <li>B3</li>
+                        <li>B4</li>
+                        <li>B5</li>
+                        <li>B6</li>
+                        <li>B7</li>
+                    </ul>
+
+                    <ul class="songs">
+                        <li>In The Flesh?</li>
+                        <li>The Thin Ice</li>
+                        <li>Another Brick In The Wall Part 1</li>
+                        <li>The Happiest Days Of Our Lives</li>
+                        <li>Another Brick In The Wall Part 2</li>
+                        <li>Mother</li>
+                        <li>Goodbuy Blue Sky</li>
+                        <li>Empty Spaces</li>
+                        <li>Young Lust</li>
+                        <li>One Of My Turns</li>
+                        <li>Don't Leave Me Now</li>
+                        <li>Another Brick In The Wall Part 3</li>
+                        <li>Goodbuy Cruel World</li>
+                    </ul>
+
+                    <audio controls><source src=""></audio>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- information of companies and credits -->
+            <section class="info_section2">
+                <div class="flex_container">
+                    <div>
+                        <h1>Companies</h1>
+                        <ul>
+                            <li>Manufactured By - Columbia Records</li>
+                            <li>Manufactured By - CBS Inc.</li>
+                            <li>Phonographic Copyright (p) - Pink Floyd Music Ltd.</li>
+                            <li>Copyright (c) - Pink Floyd Music Ltd.</li>
+                            <li>Copyright (c) - Pink Floyd Music Publisher Ltd.</li>
+                            <li>Recorded At - Super Bear Studios</li>
+                            <li>Recorded At - Columbia Recording Studios</li>
+                            <li>Recorded At - Producers Workshop</li>
+                            <li>Mastered At - The Mastering Lab</li>
+                            <li>Presed By - Columbia Records Pressing Plant, Santa Maria</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h1>Credits</h1>
+                        <ul>
+                            <li>Arranged By [Orchestra]- Bob Ezrin, Michael Kamen</li>
+                            <li>Backing Vocals – Bruce Johnston, Joe Chemay, John Joyce, Stan Farber, Toni Tennille</li>
+                            <li>Co-producer, Engineer – James Guthrie</li>
+                            <li>Design [Illustration] – Gerald Scarfe</li>
+                            <li>Design [Sleeve Design] – Gerald Scarfe, Roger Waters</li>
+                            <li>Engineer – Brian Christian, John McClure, Nick Griffiths, Patrice Quef, Rick Hart</li>
+                            <li>Lyrics By – Roger Waters</li>
+                            <li>Other [Sound Equipment] – Phil Taylor</li>
+                            <li>Performer – David Gilmour, Nick Mason, Richard Wright, Roger Waters</li>
+                            <li>Producer – Bob Ezrin, David Gilmour, Roger Waters</li>
+                            <li>Written-By – Roger Waters</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- seller information section -->
+            <section class="info_section2">
+                <h1>Seller Information</h1>
+                <h2>Seller: <a href="">salvyrecords64</a></h2>
+                <p><b>Item Ships From:</b> Venezuela</p>
+                <p><b>Payment Information:</b> Paypal</p>
+                <p><b>Media Condition:</b> Very Good Plus (VG+)</p>
+                <p>View <a href=""><b>Seller Terms</b></a></p>               
+            </section>
+
+            <hr>
+
+            <!-- notes from seller -->
+            <section class="info_section2">
+                <h1>Notes</h1>
+                <p>Recorded at Superbear, Miravel, France. CBS, New York. Producers Workshop, Los Angeles. Between April and November, 1979.</p>
+                <p>Toni Tennille appears courtesy of Casablanca Record And Filmworks, Inc.</p>
+                <p>All songs ©1979 Pink Floyd Music Publishers, Ltd. (BMI)<br>
+                    ℗1979 Pink Floyd Music Ltd.<br>
+                    ©1979 Pink Floyd Music Ltd.<br>
+                    Manufactured by Columbia Records/CBS Inc.</p>
+                <p>Inner sleeves contain lyrics.</p>
+                <p>Second Issue Sleeve Variation: On the inside cover, this issue says "Written by Roger Waters," and two bricks down it says "PINK FLOYD - Roger Waters, David Gilmour, Nick Mason, Richard Wright."</p>
+                <p>This pressing has no barcode on the back cover. A later pressing with a printed barcode exists.</p>
+            </section>
+        </div>
+
+        <!-- recommendation section -->
+        <h1>Recommendations</h1>
+        <div class="grey_background">
+            <div class="flex_container">
+                <section class="product">
+                    <img class="record_cover" src="public/images/products/cheeba fever e.p.jpg" alt="cover of album Cheeba Fever E.P.">
+                    <h2>DJ Ex-Efx</h2>
+                    <h3>Cheeba Fever E.P.</h3>
+                    <p class="price">A$15.60</p>
+                </section>
+
+                <section class="product">
+                    <img class="record_cover" src="public/images/products/sally free and easy ep.jpg" alt="cover of album Sally Free And Easy EP">
+                    <h2>Flying Saucer Attack</h2>
+                    <h3>Sally Free And Easy EP</h3>
+                    <p class="price">A$27.00</p>
+                </section>
+
+                <section class="product">
+                    <img class="record_cover" src="public/images/products/finale.jpg" alt="cover of album Finale">
+                    <h2>Baby Mammoth</h2>
+                    <h3>Finale</h3>
+                    <p class="price">A$10.00</p>
+                </section>
+    
+                <section class="product">
+                    <img class="record_cover" src="public/images/products/the limitations ep.jpg" alt="cover of album The Limitations EP">
+                    <h2>Dr Delay</h2>
+                    <h3>The Limitations</h3>
+                    <p class="price">A$5.00</p>
+                </section>
+    
+                <section class="product">
+                    <img class="record_cover" src="public/images/products/a very special christmas.jpg" alt="cover of album A Very Special Christmas">
+                    <h2>Various</h2>
+                    <h3>A Very Special Christmas</h3>
+                    <p class="price">A$15.00</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- 3 footer lists -->
+        <div class="flex_container">
+            <div class="footer_list">
+                <ul>
+                    <h2>Help</h2>
+                    <li><a href="">Get Started</a></li>
+                    <li><a href="">Shipping</a></li>
+                    <li><a href="">Payment</a></li>
+                    <li><a href="">Help and Support</a></li>
+                    <li><a href="">Forum</a></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="footer_list">
+                <ul>
+                    <h2>Contact</h2>
+                    <li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+                    <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                    <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href=""><i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+                    <li><a href=""><i class="fa fa-soundcloud" aria-hidden="true"></i> Soundcloud</a></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="footer_list">
+                <ul>
+                    <h2>Discogs</h2>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Sign up</a></li>
+                    <li><a href="">Community</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Discogs Events</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul id="footer_items">
+            <li><a href="">	&copy; 2020 Discogs</a></li>
+            <li><a href="">Cookie Policy</a></li>
+            <li><a href="">Term of Servic</a></li>
+            <li><a href="">Privacy Policy</a></li>
+        </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
