@@ -1,0 +1,586 @@
+html {
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+main {
+    margin: 0 4.5% 0 4.5%;
+}
+
+main img {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2E2E2C;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+h1 {
+    font-family: orator-std, monospace;
+    font-weight: 400;
+    font-size: 2.5rem;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+
+p {
+    font-family: inherit;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+}
+
+a:link, a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+a.search_button {
+    display: none;
+}
+img#logo {
+    width: 12rem;
+}
+
+/* search box */
+div.text_box, div.subscribe_box {
+    display: flex;
+    margin-top: 20px;
+    background: #DDDDDD;
+    height: 35px;
+    width: 300px;
+    border-radius: 40px;
+    padding: 10px;
+}
+div.text_box a.search_button {
+    color: black;
+    padding-right: 0.3rem;
+    font-size: 1.5rem;
+    background-color: #DDDDDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.text_box a.search_button:hover {
+    text-decoration: none;
+}
+input.input_txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding-left: 0.5rem;
+    color: black;
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 40px;
+    width: 280px;
+}
+
+/* navigation bar in the header */
+nav#topnav {
+    flex-grow: 2;
+}
+ul {
+    list-style-type: none;
+}
+nav#topnav ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+a.hamburger {
+    display: none;
+}
+
+/* the main image and the introduction text of the homepage */
+div.container {
+    position: relative;
+}
+div.container a#intro {
+    font-size: 1.5vw;
+    bottom: 10%;
+    color: black;
+}
+div.container img {
+    margin: 2rem 0 2rem 0;
+}
+
+/* navigation under the main image of homepage*/
+div.flex_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+div.flex_container div.container {
+    width: 25vw;
+    padding: 0 2rem 0 2rem;
+}
+img.nav_image {
+    opacity: 60%;
+}
+div.container a {
+    position: absolute;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: 2.3rem;
+    left: 50%;
+    bottom: 30%;
+    transform: translate(-50%, -50%);
+}
+
+/* newsletter subscription text box */
+div.flex_container h2 {
+    margin: 2.5% 0 5% 0;
+}
+div.flex_container div.text_box {
+    width: 400px;
+}
+button#subscribe_button {
+    background-color: inherit;
+    outline: none;
+    color: #1EA1E6;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+
+/* APP advertisement section */
+div.grey_background {
+    background-color: #2E2E2C;
+    margin: 0 -5% 0 -5%;
+    padding: 2% 4.5% 2% 4.5%;
+}
+/* grid layout inside app section */
+div.grey_background .layout {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    margin: 0 20% 0 20%;
+}
+div.layout img.item1 {
+    grid-row: 1 / 3;
+    width: 300px;
+}
+div.layout h2 {
+    grid-column: 2 / 3;
+    text-align: center;
+    line-height: 1.6;
+    padding-top: 5em;
+    padding-left: 1.5em;
+}
+div.layout img.item2 {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+    width: 140px;
+    padding-left: 1em;
+}
+div.layout img.item3 {
+    grid-column: 3 / 3;
+    grid-row: 2 / 2;
+    width: 150px;
+}
+
+/* footer style */
+div.footer_list ul {
+    font-size: 1.2rem;
+    padding-top: 2rem;
+}
+div.footer_list ul li a {
+    color: #A2A2A2;
+    line-height: 1.6;
+}
+ul#footer_items li {
+    display: inline;
+}
+footer hr {
+    display: none;
+}
+
+/* About Discogs page */
+h1#about_txt {
+    position: absolute;
+    font-size: 4vw;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    color: black;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+main#about div.grey_background {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+div.cards {
+    width: 30rem;
+}
+
+/* Login and create an account forms */
+form.container {
+    padding: 0 2rem 0 2rem;
+    flex: 40%;
+}
+/* text box style for long input */
+input.long_txt {
+    width: 100%;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: inherit;
+    padding-left: .8rem;
+    margin: 0 0 1rem 0;
+}
+/* button's default style */
+button {
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: white;
+    font-family: inherit;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    height: 3rem;
+    padding: 0 1rem 0 1rem;
+}
+button.green_button {
+    background-color: rgb(75, 148, 75);
+}
+button.green_button:hover {
+    background-color: #5CB85C;
+}
+button.blue_button {
+    background-color: #507CC0;
+    width: 49%;
+}
+button.blue_button:hover {
+    background-color: #678abe;
+}
+button.red_button {
+    background-color: #DF4930;
+    width: 49%;
+}
+button.red_button:hover {
+    background-color: #df624c;
+}
+
+/* breadcrumbs style */
+ul.breadcrumb {
+    padding: .5em 0 .5em 0;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    content: "/\00a0";
+}
+
+/* filter style */
+label {
+    font-size: 1.3rem;
+}
+select {
+    padding: .4em;
+    margin: .5em;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+button.grey_button {
+    background-color: rgb(83, 83, 83);
+}
+.grey_button:hover {
+    background-color: #7B7B7B;
+}
+button#filter {
+    display: none;
+}
+
+/* product list */
+h2.section_heading {
+    font-size: 2em;
+}
+div#product_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+section.product {
+    margin: 1% .5rem 1% .5rem;
+    width: 15rem;
+}
+img.record_cover {
+    margin-bottom: -0.5rem;
+}
+section.product button.grey_button {
+    font-size: 1rem;
+    height: 2rem;
+}
+p.price {
+    color: #A2A2A2;
+}
+a.page {
+    font-size: 1.4rem;
+    padding: 0 1em 0 1em;
+    position: relative;
+    left: 43%;
+}
+h3.no_of_items {
+    position: relative;
+    left: 41.5%;
+}
+
+/* major information in the product page */
+div.product_info img {
+    width: 30rem;
+}
+div.product_info h2 {
+    font-size: 2rem;
+}
+div.flex_container ul.info { 
+    margin-left: -10rem;
+    font-size: 1.2rem;
+}
+/* grid containing buttons of quantity, wishlist and add to cart */
+div.grid_buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+}
+div.quantity_btn {
+    grid-column: 1 / 3;
+}
+/* quantity button style */
+button.quantity_btn {
+    background-color: rgb(83, 83, 83);
+    border-radius: 10px;
+    font-size: 2rem;
+    width: 3rem;
+}
+button.quantity_btn:hover {
+    background-color: #7B7B7B
+}
+input#quantity_btn {
+    height: 2.8rem;
+    width: 3rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+/* hide input arrows within the quantity box */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* style of other information section of the product */
+div.light_background {
+    background-color: #C7C7C7;
+    color: black;
+    margin: 2rem 0 2rem 0;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+}
+hr {
+    margin: 2rem 0 1rem 0;
+    color: dimgray;
+    border-style: solid;
+    border-radius: 50px;
+}
+section.info_section div.flex_container {
+    justify-content: flex-start;
+}
+section.info_section div.flex_container ul.songs {
+    padding-right: 5rem;
+}
+section.info_section li, section.info_section2 li {
+    margin-bottom: .3rem;
+    letter-spacing: .05em;
+}
+section.info_section2 div{
+    width: 100%;
+}
+
+/* shopping cart */
+/* text box style for short input */
+input.short_txt {
+    height: 2rem;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: inherit;
+    padding-left: .8rem;
+    margin: -5rem 0 1rem 0;
+}
+/* grid layout containing buttons including continue shopping & checkout */
+main#shopping_cart div.grid_buttons h2 {
+    font-size: 2rem;
+    justify-self: end;
+}
+
+/* Checkout form */
+div.col-45 {
+    flex: 45%;
+}
+div.col-55 {
+    flex: 55%;
+}
+/* contains the icons of "accepted cards" in payment form */
+div.icon_container {
+    margin-bottom: .1rem;
+    padding: 7px 0;
+    font-size: 2rem;
+}
+/* grid layout contains purchase summary */
+div.col-45 div.grid_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+div.col-45 img {
+    width: 10rem;
+}
+
+
+/* styles for small screens */
+
+@media screen and (max-width: 1200px) {
+    /* header */
+    /* change position of logo to the center */
+    img#logo {
+        position: absolute;
+        left: 40vw;
+    }
+    div.text_box, nav#topnav {
+        display: none;
+    }
+    /* make the search and hamburger icons visible */
+    a.search_button, a.hamburger {
+        display: inline;
+        padding: 1.3rem 0;
+        font-size: 2.5rem;
+    }
+    /* make navigation list vertical */
+    nav#topnav ul {
+        flex-direction: column;
+        margin-top: 7rem;
+    }
+    nav#topnav ul a{
+        display: block;
+        padding: 0.5rem 0 0.5rem 0;
+        text-decoration: none;
+    }
+    nav#topnav ul a:hover {
+        background-color: rgb(122, 122, 122);
+    }
+
+    /* navigation under the wide image */
+    div.flex_container div.container {
+        width: 15rem;
+        margin: 0 -1.7rem 0 -1.7rem;
+    }
+
+    /* dropdown filter list in the product listing page */
+    div#filter_list {
+        display: none;
+    }
+    /* filter icon */
+    button#filter {
+        display: block;
+        float: right;
+    }
+    div#filter_list div.flex_container {
+        flex-direction: column;
+    }
+    div#filter_list button.grey_button {
+        width: 50%;
+    }
+
+    /* product image in shopping cart */
+    div.item{
+        width: 20vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    img#logo {
+        position: absolute;
+        left: 30vw;
+    }
+    /* navigation under the wide image */
+    div.flex_container div.container {
+        width: 100%;
+    }
+
+    /* make app advertisement section invisible */
+    section.app_section {
+        display: none;
+    }
+
+    /* re-arrange footer list to one column */
+    footer div.flex_container {
+        flex-direction: column;
+    }
+    footer hr {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: -50px;
+    }
+    footer div.flex_container li a {
+        display: none;
+    }
+
+    /* make buttons in the log in form wider */
+    div.flex_container form.container button {
+        width: 100%;
+        margin: 5px 0 5px 0;
+    }
+
+    /* change position of page link in product listing page */
+    a.page {
+        position: relative;
+        left: 29%;
+    }
+    h3.no_of_items {
+        position: relative;
+        left: 25%;
+    }
+
+    /* re-arrange the purchase summary in shopping cart */
+    div.buttons, div.item, div.description, div.quantity, div.price {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
