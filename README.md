@@ -4,7 +4,7 @@
 
 Welcome to my assignment 3 submission repository!
 
-### General Info
+## General Info
 
 This project aims to analyse, redesign and develop a website that related to a topic given by tutors.
 
@@ -19,7 +19,7 @@ My proposed design "[https://xd.adobe.com/view/46e10040-b463-493d-8958-500c1941f
 
 #### Records (Vinyls & CDs)
 
-### My Client
+## My Client
 
 #### Discogs
 
