@@ -19,8 +19,8 @@ My proposed design "[https://xd.adobe.com/view/46e10040-b463-493d-8958-500c1941f
 
 #### Discogs
 
-Discogs is a crowdbased databased website based on audio recordings. Users with their account can contribute to the website by selling their products and communicate with other sellers. However, there are several problems that may influence the experience of using the website or confuse users. I changed some functionalities and try to address problems in the proposed design.
+Discogs is a crowdbased databased website based on audio recordings. Users with their account can contribute to the website by selling their products and communicate with other sellers. However, there are several problems that may influence the user experience. I changed some functionalities and try to address problems in the proposed design.
 
-- Users cannot purchase items as a guest customer. The shopping and checkout flow is different to other ecommerce websites, and buyers cannot cancel the order. These features will be modified in the propsed design in order not to create confusion.
-- Product information will be displayed in one page in the new design. The initial website divide product pages into two via different functions. There are a little difference between the two pages, but users can only purchase product in one page via marketplace. 
-- The design of homepage in initial website is different to other pages, which may create confusion. As a result, the new design will consistently apply one theme throughout the website.
+- Users cannot purchase items as a guest customer. The shopping and checkout flow is different to other ecommerce websites, and buyers cannot cancel orders. These features will be modified in the propsed design in order not to create confusion.
+- Product information will be displayed in one page in the new design. The initial website divides product information into two separate pages via different functions. There are a little differences between the two pages, but users can only purchase product in one page via marketplace.
+- The design theme of homepage in initial website is different to other pages. The new design will consistently apply one theme throughout the website.
