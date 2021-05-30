@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/mjj6lpb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../public/stylesheet.css">
+    <script src="../js/script.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <!-- search button in small screen -->
+        <a class="search_button" href="#"><i class="fa fa-search"></i></a>
+
+        <!-- logo -->
+        <a href="index.html"><img id="logo" src="../public/images/Discogs Logo.jpeg" alt="Discogs Logo"></a>
+
+        <!-- search box -->
+        <div class="text_box">
+            <input class="input_txt" type="text" placeholder="Search album, artists and more..." name="">
+            <a class="search_button" href="#"><i class="fa fa-search"></i></a>
+        </div>
+
+        <!-- top navigation list -->
+        <nav id="topnav">
+            <ul>
+                <li><a href="productListing.html">Buy Music</a></li>
+                <li><a href="">Sell Music</a></li>
+                <li><a href=""><i class="fa fa-question-circle"></i> Help</a></li>
+                <li><a href=""><i class="fa fa-heart"></i> Wishlist</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="login.html"><i class="fa fa-user"></i> Log In</a></li>
+            </ul>
+        </nav>
+
+        <!-- hamburger icon in small screen -->
+        <a href="javascript:void(0);" class="hamburger" onclick="showHide('topnav')"><i class="fa fa-bars"></i></a>
+    </header>
+
+    <main>
+        <div class="flex_container">
+            <!-- log in form -->
+            <form name="loginForm" class="container" onsubmit="submitForm()">
+                <h1>Log In</h1>
+                <div>
+                    <label for="uname"><h3>Username</h3></label>
+                    <input class="long_txt" type="text" placeholder="Enter Username" name="uname" required>
+                </div>
+
+                <div>
+                    <label for="psw"><h3>Password</h3></label>
+                    <input class="long_txt" type="password" placeholder="Enter Password" name="psw" required>
+                </div>
+
+                <button class="green_button" type="submit">Log In</button>
+
+                <hr>
+
+                <div class="flex_container">
+                    <button class="blue_button" type="button"><i class="fa fa-facebook"></i> Sign in with <b>FaceBook</b></button>
+                    <button class="red_button" type="button"><i class="fa fa-google"></i> Sign in with <b>Google</b></button>
+                </div>
+            </form>
+
+            <!-- create an account -->
+            <form name="loginForm" class="container" onsubmit="submitForm()">
+                <h1>Create a New Account</h1>
+                <div>
+                    <label for="uname"><h3>Username</h3></label>
+                    <input class="long_txt" type="text" placeholder="Enter Username" name="uname" required>
+                </div>
+
+                <div>
+                    <label for="email"><h3>Email Address</h3></label>
+                    <input class="long_txt" type="email" placeholder="Enter email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="psw"><h3>Password</h3></label>
+                    <input class="long_txt" type="password" placeholder="Enter Password" name="psw" required>
+                </div>
+
+                <div>
+                    <label for="psw"><h3>Confirm Password</h3></label>
+                    <input class="long_txt" type="password" placeholder="Enter Password" name="psw" required>
+                </div>
+
+                <label for="agree">
+                    <input class="agree" type="checkbox" name="accept"> I accept the Privacy Policy and I agree to the Terms of Service, including minimum age requirements.<br><br>
+                </label>
+
+                <button class="green_button" type="submit">Create Account</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <!-- 3 footer lists -->
+        <div class="flex_container">
+            <div class="footer_list">
+                <ul>
+                    <h2>Help</h2>
+                    <li><a href="">Get Started</a></li>
+                    <li><a href="">Shipping</a></li>
+                    <li><a href="">Payment</a></li>
+                    <li><a href="">Help and Support</a></li>
+                    <li><a href="">Forum</a></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="footer_list">
+                <ul>
+                    <h2>Contact</h2>
+                    <li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+                    <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                    <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href=""><i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+                    <li><a href=""><i class="fa fa-soundcloud" aria-hidden="true"></i> Soundcloud</a></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="footer_list">
+                <ul>
+                    <h2>Discogs</h2>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Sign up</a></li>
+                    <li><a href="">Community</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Discogs Events</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul id="footer_items">
+            <li><a href="">	&copy; 2020 Discogs</a></li>
+            <li><a href="">Cookie Policy</a></li>
+            <li><a href="">Term of Servic</a></li>
+            <li><a href="">Privacy Policy</a></li>
+        </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

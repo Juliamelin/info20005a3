@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/mjj6lpb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../public/stylesheet.css">
+    <script src="../js/script.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <!-- search button in small screen -->
+        <a class="search_button" href="#"><i class="fa fa-search"></i></a>
+
+        <!-- logo -->
+        <a href="index.html"><img id="logo" src="../public/images/Discogs Logo.jpeg" alt="Discogs Logo"></a>
+
+        <!-- search box -->
+        <div class="text_box">
+            <input class="input_txt" type="text" placeholder="Search album, artists and more..." name="">
+            <a class="search_button" href="#"><i class="fa fa-search"></i></a>
+        </div>
+
+        <!-- top navigation list -->
+        <nav id="topnav">
+            <ul>
+                <li><a href="productListing.html">Buy Music</a></li>
+                <li><a href="">Sell Music</a></li>
+                <li><a href=""><i class="fa fa-question-circle"></i> Help</a></li>
+                <li><a href=""><i class="fa fa-heart"></i> Wishlist</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="login.html"><i class="fa fa-user"></i> Log In</a></li>
+            </ul>
+        </nav>
+
+        <!-- hamburger icon in small screen -->
+        <a href="javascript:void(0);" class="hamburger" onclick="showHide('topnav')"><i class="fa fa-bars"></i></a>
+    </header>
+
+    <main id="shopping_cart">
+        <!-- breadcrumb list -->
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productListing.html">Buy Music</a></li>
+            <li><a href="productListing.html">All Items</a></li>
+            <li><a href="product.html">Pink Floyd - The Wall</a></li>
+            <li><a href="#">Shopping Cart</a></li>
+        </ul>
+
+        <div class="light_background">
+            <h1>Shopping Cart</h1>
+
+            <!-- product summary -->
+            <div class="flex_container">
+                <div class="buttons">
+                    <button class="grey_button"><i class="fa fa-times"></i></button>
+                </div>
+
+                <div class="item">
+                    <img src="../public/images/products/the wall.jpg" alt="album cover of The Wall">
+                </div>
+
+                <div class="description">
+                    <h2>Pink Floyd</h2>
+                    <h2><a href="product.html">The Wall</a></h2>
+                    <h3><br>Seller: <a href="">salvyrecords64</a></h3>
+                    <button class="grey_button"><i class="fa fa-heart"></i> Add to Wishlist</button>
+                </div>
+
+                <div class="quantity">
+                    <button onclick="substract()" class="quantity_btn" type="button">-</button>
+                    <input type="number" id="quantity_btn" value="1" min="1">
+                    <button onclick="append()" class="quantity_btn" type="button">+</button>
+                </div>
+
+                <div class="price">
+                    <h2>$24.83</h2>
+                </div>
+            </div>
+
+            <!-- second product -->
+            <div class="flex_container">
+                <div class="buttons">
+                    <button class="grey_button"><i class="fa fa-times"></i></button>
+                </div>
+
+                <div class="item">
+                    <img src="../public/images/products/the marshall mathers.jpg" alt="album cover of The Marshall Mathers">
+                </div>
+
+                <div class="description">
+                    <h2>Eminem</h2>
+                    <h2><a href="=">The Marshall Mathers</a></h2>
+                    <h3><br>Seller: <a href="">ZiggyPlayed</a></h3>
+                    <button class="grey_button"><i class="fa fa-heart"></i> Add to Wishlist</button>
+                </div>
+
+                <div class="quantity">
+                    <button onclick="substract()" class="quantity_btn" type="button">-</button>
+                    <input type="number" id="quantity_btn" value="1" min="1">
+                    <button onclick="append()" class="quantity_btn" type="button">+</button>
+                </div>
+
+                <div class="price">
+                    <h2>$34.94</h2>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- shipping cost estimate section -->
+            <h1>Estimated Shipping Fee & GST</h1>
+            <p>Discogs has made it even easier to sell music. Sellers in the US can Buy and Print shipping labels directly from Discogs.com for both domestic and international shipments. <a href=""><u>See how it works</u></a></p>
+        
+            <div>
+                <label>Country:</label>
+                <select size="1">
+                    <option value="" selected="selected">Select</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="Germany">Germany</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Region:</label>
+                <select size="1">
+                    <option value="" selected="selected">Select</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="Germany">Germany</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Postcode:</label>
+                <input class="short_txt" type="number">
+            </div>
+
+            <hr>
+
+            <!-- other information  -->
+            <h2>Buying items from Discogs</h2>
+            <p>Your cart can hold items from many different sellers. When you’re ready to check out, you’ll place one order with each seller.<br><a href=""><u>Learn more about how to buy</a></u></p>
+            <p><a href="">View Transaction Terms and Policy</a></p>
+
+            <!-- total price and checkout buttons -->
+            <div class="grid_buttons">
+                <h2>Total:</h2>
+                <h2>$69.87</h2>
+                <button class="grey_button" type="button">Continue Shopping</button>
+                <button onclick="document.location='checkout.html'" class="green_button" type="button">Checkout</button>
+            </div>
+        </div>
+
+        <!-- recommendation section -->
+        <h1>Recommendations</h1>
+        <div class="grey_background">
+            <div class="flex_container">
+                <section class="product">
+                    <img class="record_cover" src="../public/images/products/cheeba fever e.p.jpg" alt="cover of album Cheeba Fever E.P.">
+                    <h2>DJ Ex-Efx</h2>
+                    <h3>Cheeba Fever E.P.</h3>
+                    <p class="price">A$15.60</p>
+                </section>
+
+                <section class="product">
+                    <img class="record_cover" src="../public/images/products/sally free and easy ep.jpg" alt="cover of album Sally Free And Easy EP">
+                    <h2>Flying Saucer Attack</h2>
+                    <h3>Sally Free And Easy EP</h3>
+                    <p class="price">A$27.00</p>
+                </section>
+
+                <section class="product">
+                    <img class="record_cover" src="../public/images/products/finale.jpg" alt="cover of album Finale">
+                    <h2>Baby Mammoth</h2>
+                    <h3>Finale</h3>
+                    <p class="price">A$10.00</p>
+                </section>
+    
+                <section class="product">
+                    <img class="record_cover" src="../public/images/products/the limitations ep.jpg" alt="cover of album The Limitations EP">
+                    <h2>Dr Delay</h2>
+                    <h3>The Limitations</h3>
+                    <p class="price">A$5.00</p>
+                </section>
+    
+                <section class="product">
+                    <img class="record_cover" src="../public/images/products/a very special christmas.jpg" alt="cover of album A Very Special Christmas">
+                    <h2>Various</h2>
+                    <h3>A Very Special Christmas</h3>
+                    <p class="price">A$15.00</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- 3 footer lists -->
+        <div class="flex_container">
+            <div class="footer_list">
+                <ul>
+                    <h2>Help</h2>
+                    <li><a href="">Get Started</a></li>
+                    <li><a href="">Shipping</a></li>
+                    <li><a href="">Payment</a></li>
+                    <li><a href="">Help and Support</a></li>
+                    <li><a href="">Forum</a></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="footer_list">
+                <ul>
+                    <h2>Contact</h2>
+                    <li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+                    <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                    <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href=""><i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+                    <li><a href=""><i class="fa fa-soundcloud" aria-hidden="true"></i> Soundcloud</a></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="footer_list">
+                <ul>
+                    <h2>Discogs</h2>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Sign up</a></li>
+                    <li><a href="">Community</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Discogs Events</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul id="footer_items">
+            <li><a href="">	&copy; 2020 Discogs</a></li>
+            <li><a href="">Cookie Policy</a></li>
+            <li><a href="">Term of Servic</a></li>
+            <li><a href="">Privacy Policy</a></li>
+        </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

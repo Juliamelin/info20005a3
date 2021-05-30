@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/mjj6lpb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../public/stylesheet.css">
+    <script src="../js/script.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <!-- search button in small screen -->
+        <a class="search_button" href="#"><i class="fa fa-search"></i></a>
+
+        <!-- logo -->
+        <a href="index.html"><img id="logo" src="../public/images/Discogs Logo.jpeg" alt="Discogs Logo"></a>
+
+        <!-- search box -->
+        <div class="text_box">
+            <input class="input_txt" type="text" placeholder="Search album, artists and more..." name="">
+            <a class="search_button" href="#"><i class="fa fa-search"></i></a>
+        </div>
+
+        <!-- top navigation list -->
+        <nav id="topnav">
+            <ul>
+                <li><a href="productListing.html">Buy Music</a></li>
+                <li><a href="">Sell Music</a></li>
+                <li><a href=""><i class="fa fa-question-circle"></i> Help</a></li>
+                <li><a href=""><i class="fa fa-heart"></i> Wishlist</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="login.html"><i class="fa fa-user"></i> Log In</a></li>
+            </ul>
+        </nav>
+
+        <!-- hamburger icon in small screen -->
+        <a href="javascript:void(0);" class="hamburger" onclick="showHide('topnav')"><i class="fa fa-bars"></i></a>
+    </header>
+
+    <main id="checkout">
+        <div class="light_background">
+            <h1>Checkout</h1>
+
+            <div class="flex_container">
+                <!-- purchase summary -->
+                <div class="col-45">
+                    <h2>Summary</h2>
+                    <div class="grid_container">
+                        <img src="../public/images/products/the wall.jpg" alt="album cover of The Wall">
+                        <h3>Pink Floyd<br><p>The Wall</p></h3>
+                        <span class="price"><h3>$24.83</h3></span>
+
+                        <img src="../public/images/products/the marshall mathers.jpg" alt="album cover of The Marshall Mathers">
+                        <h3>Eminem<br><p>The Marshall Mathers</p></h3>
+                        <h3>$34.94</h3>
+                    </div>
+                </div>
+
+                <div class="col-55">
+                    <!-- form for billing address -->
+                    <form class="container">
+                        <h2>Billing Address</h2>
+
+                        <label for="fname">Full Name</label>
+                        <input class="long_txt" name="fullname" placeholder="Zora Smith" required>
+
+                        <label for="email">Email</label>
+                        <input class="long_txt" name="email" placeholder="ZSmith112233@gmail.com" required>
+
+                        <label for="address">Address</label>
+                        <input class="long_txt" name="address" placeholder="604/6 W Street" required>
+
+                        <div class="grid_buttons">
+                            <div>
+                                <label for="country">Country</label>
+                                <select id="shipping_dl" size="1" required>
+                                    <option value="" selected="selected">Select</option>
+                                    <option value="Aus">Australia</option>
+                                    <option value="US">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="Germany">Germany</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="zip">Zip</label>
+                                <input class="short_txt" name="zip" placeholder="3000" required>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- form for payment -->
+                    <form class="container">
+                        <h2>Payment</h2>
+
+                        <label for="cards">Accepted Cards</label>
+                        <div class="icon_container"> 
+                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                        </div>
+
+                        <label for="fname">Name on Card</label>
+                        <input class="long_txt" name="fullname" placeholder="Zora Smith" required>
+
+                        <label for="cardnumber">Credit Card Number</label>
+                        <input class="long_txt" name="cardnumber" placeholder="1111 2222 3333 4444" required>
+
+                        <div class="grid_buttons">
+                            <div>
+                                <label for="expmonth">Exp Month: </label>
+                                <input class="short_txt" name="expmonth" placeholder="March" required>
+                            </div>
+
+                            <div>
+                                <label for="expyear">Exp Year: </label>
+                                <input class="short_txt" name="expyear" placeholder="2023" required>
+                            </div>
+
+                            <div>
+                                <label for="ccv">CCV</label>
+                                <input class="short_txt" name="ccv" placeholder="356" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- shopping cart and checkout buttons -->
+            <div class="grid_buttons">
+                <button onclick="document.location='cart.html'" class="grey_button" type="button">Shopping Cart</button>
+                <button class="green_button" type="button">Continue Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- 3 footer lists -->
+        <div class="flex_container">
+            <div class="footer_list">
+                <ul>
+                    <h2>Help</h2>
+                    <li><a href="">Get Started</a></li>
+                    <li><a href="">Shipping</a></li>
+                    <li><a href="">Payment</a></li>
+                    <li><a href="">Help and Support</a></li>
+                    <li><a href="">Forum</a></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="footer_list">
+                <ul>
+                    <h2>Contact</h2>
+                    <li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+                    <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                    <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href=""><i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+                    <li><a href=""><i class="fa fa-soundcloud" aria-hidden="true"></i> Soundcloud</a></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="footer_list">
+                <ul>
+                    <h2>Discogs</h2>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Sign up</a></li>
+                    <li><a href="">Community</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Discogs Events</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul id="footer_items">
+            <li><a href="">	&copy; 2020 Discogs</a></li>
+            <li><a href="">Cookie Policy</a></li>
+            <li><a href="">Term of Servic</a></li>
+            <li><a href="">Privacy Policy</a></li>
+        </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
