@@ -8,9 +8,9 @@ Welcome to my assignment 3 submission repository!
 
 This project aims to analyse, redesign and develop a website that related to a topic given by tutors.
 
-My website live link "[https://juliamelin.github.io/info20005a3/views/index.html]"
+Website live link: [https://juliamelin.github.io/info20005a3/views/index.html]
 
-My proposed design "[https://xd.adobe.com/view/46e10040-b463-493d-8958-500c1941fb9f-13b2/]"
+Proposed design: [https://xd.adobe.com/view/46e10040-b463-493d-8958-500c1941fb9f-13b2/]
 
 [https://juliamelin.github.io/info20005a3/views/index.html]: https://juliamelin.github.io/info20005a3/views/index.html
 [https://xd.adobe.com/view/46e10040-b463-493d-8958-500c1941fb9f-13b2/]: https://xd.adobe.com/view/46e10040-b463-493d-8958-500c1941fb9f-13b2/
